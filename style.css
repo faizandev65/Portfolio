@@ -270,3 +270,123 @@ footer{
 }
 
 }
+
+
+
+/* ================= EXTRA STYLING ================= */
+
+header{
+    transition:.3s;
+}
+
+header.scrolled{
+    background:#0b1220;
+    box-shadow:0 5px 20px rgba(0,0,0,.4);
+}
+
+.hero-image img{
+    animation:float 4s ease-in-out infinite;
+    box-shadow:0 0 30px rgba(56,189,248,.4);
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+.skill-card{
+    cursor:pointer;
+}
+
+.project-card{
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.project-card img{
+    height:180px;
+    object-fit:cover;
+}
+
+.project-btns a{
+    transition:.3s;
+}
+
+.project-btns a:hover{
+    background:#0284c7;
+}
+
+.contact-links a i{
+    margin-right:8px;
+}
+
+.nav-links a.active{
+    color:#38bdf8;
+}
+
+/* Scroll Animation */
+
+.hidden{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Back To Top */
+
+#topBtn{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#38bdf8;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    display:none;
+    transition:.3s;
+    z-index:999;
+}
+
+#topBtn:hover{
+    background:#0284c7;
+}
+
+/* Mobile Menu */
+
+@media(max-width:768px){
+
+.nav-links{
+    position:absolute;
+    top:75px;
+    left:0;
+    width:100%;
+    background:#111827;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    padding:25px 0;
+    transform:translateY(-150%);
+    transition:.4s;
+}
+
+.nav-links.active{
+    transform:translateY(0);
+}
+
+}
